@@ -1,0 +1,559 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --blue: #543FAF;
+  --white: #FEFEFE;
+  --gray: #f5f5f5;
+  --black1: #543FAF;
+  --black2: #543FAF;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* =============== Navigation ================ */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+}
+.logo{
+padding-top: 20px;
+padding-left: 70px;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+/* ===================== Main ===================== */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 3px var(--black2) solid;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 3px solid var(--black2);
+}
+
+.search label ion-icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.alinharPerfil{
+margin-left: 100px;
+}
+
+.session{
+  font-size: 25px;
+  margin: 10px auto;
+  background-color: #ffffff;
+ height: 32px;
+ width: 300px;
+ border-radius: 5px;
+}
+
+
+.icone{
+align-items: center;
+}
+
+.titulo{
+margin-top: 20px;
+text-align: center;
+font-size: 40px;
+}
+
+.meusDados{
+margin-top: 40px;
+display: flex;
+justify-content: center;
+}
+
+.divisaoDados{
+border: 1px black solid;
+border-radius: 30px;
+background-color: #543FAF;
+text-align: center;
+width: 600px;
+}
+
+.divisaoDados input{
+width: 60%;
+height: 50px;
+margin: 10px;
+border-radius: 30px;
+padding: 15px;
+}
+
+.dados{
+text-align: none;
+padding: 20px;
+}
+
+.dados li h2{
+color: #ccc;
+}
+
+
+
+.divisaoDados form h1{
+font-size: 40px;
+margin-top: 20px;
+margin-bottom: 40px;
+color: #FEFEFE;
+}
+
+
+
+.assinatura{
+justify-content: center;
+align-items: center;
+margin: 30px;
+}
+
+.assinatura h2{ 
+text-shadow: black 0.1em 0.1em 0.2em;
+color: #FEFEFE;
+text-align: center;
+padding: 20px;
+}
+
+
+.alinharAssinatura{
+margin: 20px 40px;
+text-align: center;
+background-color: #543FAF; 
+border-radius: 30px;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.836);
+border: 1px black solid;
+}
+
+.alinharAssinatura img{
+width: 100px;
+}
+
+
+
+.fotoPerfil{
+display: flex;
+justify-content: center;
+}
+
+.fotoPerfil button{
+width: 30px;
+height: 30px;
+aspect-ratio: 1/1;
+object-fit: cover;
+border-radius: 50%;
+border: 2px black solid;
+background-color: #db1912;
+}
+
+.foto{
+    width: 180px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px black solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hide {
+    display: none !important;
+  }
+  
+  .container1 {
+    border-radius: 30px;
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #543FAF;
+    border: 1px black solid;
+    width: 400px;
+    padding: 2rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.836);
+    margin: auto;
+  }
+  
+  /* IMC Form */
+  #calc-container h2 {
+    justify-content: center;
+    color: #FEFEFE;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .form-control {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-control label {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #ccc;
+  }
+  
+  .form-control input {
+    padding: 1rem 0.5rem;
+  }
+  
+  .action-control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  
+  .button1 {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: #9e08e3bd;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+    border-radius: 30px;
+  }
+
+  .button2 {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: #000000e2;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+    border-radius: 30px;
+  
+  }
+
+  .salvar{
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: #08a52ce2;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  .cancelar{
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: #f13939e2;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+    border-radius: 30px;
+  
+  }
+
+  .button2:hover{
+    opacity: 1;
+    background-color: #ff0000;
+    border: 1px black solid;
+  }
+
+
+
+
+  
+  .button1:hover {
+    opacity: 1;
+    background-color: #2f00ff;
+    border: 1px black solid;
+  }
+  
+ 
+  
+  /* Table */
+  #result-container {
+    text-align: center;
+  }
+  
+  #imc-number {
+    color: #FEFEFE;
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #imc-info {
+    font-size: 1.4rem;
+    color: #ccc;
+  }
+  
+  #result-container h3 {
+    margin-top: 1rem;
+    color: #dfdfdf;
+  }
+  
+  #result-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #imc-table {
+    margin: 1.5rem 0;
+    font-size: 0.8rem;
+    color: #ffffff;
+  }
+  
+  .table-header {
+    font-weight: bold;
+    color: #FEFEFE;
+  }
+  
+  .table-header,
+  .table-data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e100ff;
+    text-align: center;
+  }
+  
+  .table-header h4,
+  .table-data p {
+    flex: 1;
+  }
+  
+  .table-header h4:nth-child(3),
+  .table-data p:nth-child(3) {
+    max-width: 80px;
+  }
+  
+  #back-btn {
+    align-self: center;
+  }
+  
+  .good {
+    color: #12db34;
+  }
+  
+  .low {
+    color: #dbce12;
+  }
+  
+  .medium {
+    color: #db6212;
+  }
+  
+  .high {
+    color: #db1912;
+  }
